@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 print:p-12 md:p-16">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8 bg-white print:space-y-6">
         <div className="flex items-center justify-between">
           <div className="flex-1 space-y-1.5">
@@ -47,18 +47,6 @@ export default function Page() {
                   </a>
                 </Button>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <Button
-                  className="size-8"
-                  variant="outline"
-                  size="icon"
-                  asChild
-                >
-                  <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                    <PhoneIcon className="size-4" />
-                  </a>
-                </Button>
-              ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
@@ -77,11 +65,6 @@ export default function Page() {
               {RESUME_DATA.contact.email ? (
                 <a href={`mailto:${RESUME_DATA.contact.email}`}>
                   <span className="underline">{RESUME_DATA.contact.email}</span>
-                </a>
-              ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
                 </a>
               ) : null}
             </div>
@@ -169,7 +152,7 @@ export default function Page() {
 
         <Section className="print-force-new-page scroll-mb-16">
           <h2 className="text-xl font-bold">Projects</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 print:grid-cols-3 print:gap-2 md:grid-cols-2 lg:grid-cols-3">
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
             {RESUME_DATA.projects.map((project) => {
               return (
                 <ProjectCard
