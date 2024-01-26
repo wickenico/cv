@@ -33,7 +33,6 @@ export const RESUME_DATA = {
   personalWebsiteUrl: "https://nicowickersheim.dev",
   contact: {
     email: "nico.wickersheim@yahoo.de",
-    //tel: "+123456789",
     social: [
       {
         name: "GitHub",
