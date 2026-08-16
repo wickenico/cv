@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
@@ -30,8 +30,18 @@ export default function Page() {
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
-                <GlobeIcon className="size-3" />
+                <MapPinIcon className="size-3" />
                 {RESUME_DATA.location}
+              </a>
+            </p>
+            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+              <a
+                className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
+                href={RESUME_DATA.personalWebsiteUrl}
+                target="_blank"
+              >
+                <GlobeIcon className="size-3" />
+                {RESUME_DATA.personalWebsiteUrl.replace(/^https?:\/\//, "")}
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
@@ -142,10 +152,61 @@ export default function Page() {
           })}
         </Section>
         <Section>
+          <h2 className="text-xl font-bold">Volunteering</h2>
+          {RESUME_DATA.volunteerWork.map((volunteerWork) => {
+            return (
+              <Card key={volunteerWork.organization}>
+                <CardHeader>
+                  <div className="flex items-center justify-between gap-x-2 text-base">
+                    <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
+                      {volunteerWork.organization}
+
+                      <span className="inline-flex gap-x-1">
+                        {volunteerWork.badges.map((badge) => (
+                          <Badge
+                            variant="secondary"
+                            className="align-middle text-xs"
+                            key={badge}
+                          >
+                            {badge}
+                          </Badge>
+                        ))}
+                      </span>
+                    </h3>
+                    <div className="text-sm tabular-nums text-gray-500">
+                      {volunteerWork.start} - {volunteerWork.end}
+                    </div>
+                  </div>
+
+                  <h4 className="font-mono text-sm leading-none">
+                    {volunteerWork.title}
+                  </h4>
+                </CardHeader>
+                <CardContent className="mt-2 text-xs">
+                  {volunteerWork.description}
+                </CardContent>
+              </Card>
+            );
+          })}
+        </Section>
+        <Section>
           <h2 className="text-xl font-bold">Skills</h2>
           <div className="flex flex-wrap gap-1">
             {RESUME_DATA.skills.map((skill) => {
               return <Badge key={skill}>{skill}</Badge>;
+            })}
+          </div>
+        </Section>
+
+        <Section>
+          <h2 className="text-xl font-bold">Languages</h2>
+          <div className="flex flex-wrap gap-1">
+            {RESUME_DATA.languages.map((language) => {
+              return (
+                <Badge key={language.name}>
+                  {language.name} — {language.level}
+                </Badge>
+              );
             })}
           </div>
         </Section>

@@ -24,12 +24,10 @@ export const RESUME_DATA = {
   initials: "NW",
   location: "Freiburg, Germany",
   locationLink: "https://maps.app.goo.gl/wPQbwzPRPN5H9V4X8",
-  about:
-    "Passionated Full Stack Engineer with focus on Kotlin with Ktor, React and Cloud-Native in an agile environment.",
+  about: "Software Engineer building secure infrastructure for FinTech.",
   summary:
-    "As a Full Stack Engineer, I have been working on a wide range of projects. Gained experience in building and maintaining process-driven ERP systems, now working with financial web applications. I am a big fan of Kotlin and React. I am also interested in Cloud-Native technologies like Terraform, AWS and DevOps.",
-  avatarUrl:
-    "https://avatars.githubusercontent.com/u/35769900?s=400&u=8d47f586b3c540183875fffa3983953934e6966a&v=4",
+    "Versatile software engineer with a decade of experience across backend systems, enterprise applications, and modern cloud-native architecture. Currently driving security and identity infrastructure for a FinTech platform.",
+  avatarUrl: "/avatar.png",
   personalWebsiteUrl: "https://nicowickersheim.dev",
   contact: {
     email: "nico.wickersheim@yahoo.de",
@@ -69,41 +67,95 @@ export const RESUME_DATA = {
   ],
   work: [
     {
-      company: "sevDesk GmbH",
-      link: "https://sevdesk.de",
-      badges: ["Remote"],
-      title: "Full Stack Developer",
-      start: "May 2022",
-      end: "today",
+      company: "Shine GmbH",
+      link: "https://shine.co",
+      badges: ["Full-time"],
+      title: "Software Engineer",
+      start: "May 2026",
+      end: "Present",
       description:
-        "Creating central services for the sevDesk ecosystem with Kotlin and building the groundworking infrastructure for the future of sevDesk with Terraform and AWS. Working in an agile environment with Scrum and Jira.",
+        "Designing the architecture of a centralized Identity & Access Management platform in FinTech and implementing secure authentication and authorization flows.",
     },
     {
-      company: "trend SWM GmbH",
+      company: "Spreadity GmbH",
+      link: "https://spreadity.com",
+      badges: ["Part-time"],
+      title: "Full Stack Developer",
+      start: "October 2025",
+      end: "Present",
+      description:
+        "Driving the development of Time Engineer with Next, React, Clerk and Supabase.",
+    },
+    {
+      company: "sevDesk GmbH",
+      link: "https://sevdesk.de",
+      badges: ["Full-time"],
+      title: "Advanced Software Developer",
+      start: "May 2022",
+      end: "April 2026",
+      description:
+        "Developing central services as part of an agile scrum backend team with Kotlin and Cloud.",
+    },
+    {
+      company: "Telocate GmbH",
+      link: "https://en.telocate.de",
+      badges: ["Part-time"],
+      title: "Front End Developer",
+      start: "February 2024",
+      end: "September 2025",
+      description:
+        "Expand indoor localization ui with maps using OpenLayers and JavaScript.",
+    },
+    {
+      company: "trend SWM EDV-Beratung GmbH & Co.KG",
       link: "https://trendswm.de/",
-      badges: ["on-premise"],
+      badges: ["Full-time"],
       title: "Software Developer",
       start: "August 2014",
-      end: "April 2022",
+      end: "May 2022",
       description:
-        "Developing and maintaining process-driven ERP system for the different industries with ILE PRG in an IBM ecosystem.",
+        "Developing a ERP application with focus on business process management in ILE RPG on IBM iSeries (formally known as AS/400).",
+    },
+  ],
+  volunteerWork: [
+    {
+      organization: "Volunteer Mentor",
+      badges: ["Volunteer"],
+      title: "Student Placement Support",
+      start: "July 2020",
+      end: "Present",
+      description:
+        "Helping students from Madagascar find an FSJ (Freiwilliges Soziales Jahr) or BFD (Bundesfreiwilligendienst) placement in Germany, including preparing application documents and guiding them through the application process.",
     },
   ],
   skills: [
+    "Identity & Access Management",
     "Kotlin",
-    "Ktor",
-    "Docker",
-    "AWS",
-    "Terraform",
-    "Git",
+    "TypeScript",
     "React",
-    "Node.js",
+    "Spring Boot",
+    "AWS",
+    "GCP",
+    "Terraform",
+    "Kubernetes",
+    "Docker",
     "SQL",
-    "Scrum",
-    "DevOps",
-    "Jira",
+  ],
+  languages: [
+    { name: "German", level: "Native" },
+    { name: "English", level: "Fluent" },
   ],
   projects: [
+    {
+      title: "WailBrew",
+      techStack: ["Side Project", "Go", "Wails", "React", "macOS"],
+      description:
+        "Minimalistic Homebrew GUI made with Go, Wails and React for managing your Mac packages.",
+      link: {
+        label: "WailBrew",
+        href: "https://github.com/wickenico/WailBrew",
+      },
+    },
     {
       title: "Madagassisch.de",
       techStack: ["Side Project", "React", "Node.js", "Firebase", "NoSQL"],
@@ -121,86 +173,6 @@ export const RESUME_DATA = {
       link: {
         label: "nicowickersheim.dev",
         href: "https://nicowickersheim.dev/",
-      },
-    },
-    {
-      title: "PyHtmlToCSVConverter",
-      techStack: ["Side Project", "Python", "CSV", "Converter", "Crawling"],
-      description:
-        "Reading data from website and converting it to CSV file using Python.",
-      link: {
-        label: "PyHtmlToCSVConverter",
-        href: "https://github.com/wickenico/py-html-to-csv-converter",
-      },
-    },
-    {
-      title: "Bookify Ktor Backend",
-      techStack: [
-        "Side Project",
-        "Kotlin",
-        "Ktor",
-        "REST",
-        "PostgreSQL",
-        "Google Books API",
-      ],
-      description: "Book management backend built with Kotlin and Ktor.",
-      link: {
-        label: "bookify-ktor-backend",
-        href: "https://github.com/wickenico/bookify-ktor-backend",
-      },
-    },
-    {
-      title: "Bookify Vuejs Frontend",
-      techStack: ["Side Project", "Vue", "Node.js"],
-      description:
-        "Book management frontend built with Vue.js and Node.js. Consuming Bookify Ktor Backend.",
-      link: {
-        label: "bookify-vuejs-frontend",
-        href: "https://github.com/wickenico/bookify-vuejs-frontend",
-      },
-    },
-    {
-      title: "Scriptable BTC-USD Widget",
-      techStack: [
-        "Side Project",
-        "Scriptable",
-        "JavaScript",
-        "Widget",
-        "Bitcoin",
-        "Crypto",
-      ],
-      description:
-        "Bitcoin price widget for iOS built with Scriptable and JavaScript.",
-      link: {
-        label: "btc-usd-course.js",
-        href: "https://github.com/wickenico/btc-usd-course.js",
-      },
-    },
-    {
-      title: "Scriptable Crypto Ticker",
-      techStack: [
-        "Side Project",
-        "Scriptable",
-        "JavaScript",
-        "Widget",
-        "Crypto",
-        "Coinbase",
-      ],
-      description:
-        "Crypto price widget for iOS built with Scriptable and JavaScript",
-      link: {
-        label: "crypto-ticker-widget.js",
-        href: "https://github.com/wickenico/crypto-ticker-widget.js",
-      },
-    },
-    {
-      title: "Scriptable Hub",
-      techStack: ["Side Project", "Scriptable", "JavaScript", "Widget"],
-      description:
-        "Collection of widgets for iOS built with Scriptable and JavaScript.",
-      link: {
-        label: "scriptable-hub",
-        href: "https://github.com/wickenico/scriptable-hub",
       },
     },
   ],
