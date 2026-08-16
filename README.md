@@ -31,13 +31,13 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
 3. Install dependencies:
 
    ```bash
-   npm install
+   pnpm install
    ```
 
 4. Start the local Server:
 
    ```bash
-   npm run dev
+   pnpm dev
    ```
 
 5. Open the [Config file](./src/data/resume-data.tsx) and make changes
